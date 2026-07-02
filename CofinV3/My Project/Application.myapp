@@ -1,0 +1,5 @@
+﻿<ApplicationDefinition xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <MyApplication>
+    <MainForm>frmInicial</MainForm>
+  </MyApplication>
+</ApplicationDefinition>

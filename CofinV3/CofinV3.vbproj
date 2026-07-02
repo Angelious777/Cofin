@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1BF13F57-DCF6-493C-8F95-7F6E628CF8B5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CofinV3.frmInicial</StartupObject>
+    <RootNamespace>CofinV3</RootNamespace>
+    <AssemblyName>CofinV3</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\ROGER\Escritorio\Prueba Windows 7\2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CofinV3.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <CodeAnalysisRuleSet>BasicDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CofinV3.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>Off</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Text</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>35CC51DAA2852FAAC8D6229A0FA0CB1F1A39912A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CofinV3_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo5.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="crpCACPJ\CACPJ.vb" />
+    <Compile Include="crpCACPJ\frmCACPJ2.Designer.vb">
+      <DependentUpon>frmCACPJ2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpCACPJ\frmCACPJ2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCACPJ\frmCACPJ3.Designer.vb">
+      <DependentUpon>frmCACPJ3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpCACPJ\frmCACPJ3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCACPJ\frmCACPJ4.Designer.vb">
+      <DependentUpon>frmCACPJ4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpCACPJ\frmCACPJ4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpPlataforma\frmBuscarFormulario.Designer.vb">
+      <DependentUpon>frmBuscarFormulario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpPlataforma\frmBuscarFormulario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCACPJ\frmCACPJ1.Designer.vb">
+      <DependentUpon>frmCACPJ1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpCACPJ\frmCACPJ1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCACPN\frmCACPN4.Designer.vb">
+      <DependentUpon>frmCACPN4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpCACPN\frmCACPN4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCACPN\frmCACPN2.Designer.vb">
+      <DependentUpon>frmCACPN2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpCACPN\frmCACPN2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCACPN\frmCACPN3.Designer.vb">
+      <DependentUpon>frmCACPN3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpCACPN\frmCACPN3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCACPN\frmCACPN5.Designer.vb">
+      <DependentUpon>frmCACPN5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpCACPN\frmCACPN5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCACPN\frmCACPN1.Designer.vb">
+      <DependentUpon>frmCACPN1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpCACPN\frmCACPN1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpPlataforma\frmPlataforma.Designer.vb">
+      <DependentUpon>frmPlataforma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpPlataforma\frmPlataforma.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpReclamo\Reclamo.vb" />
+    <Compile Include="crpReportes\BordeEnCadaPagina.vb" />
+    <Compile Include="crpReportes\ReporteCACPN.vb" />
+    <Compile Include="crpReportes\ReporteGiroInt.vb" />
+    <Compile Include="crpReportes\ReporteReclamo.vb" />
+    <Compile Include="crpReportes\ReporteTarjeta.vb" />
+    <Compile Include="crpReportes\ReporteTransferenciaInt.vb" />
+    <Compile Include="crpTarjeta\frmAsignacionTarjeta.Designer.vb">
+      <DependentUpon>frmAsignacionTarjeta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpTarjeta\frmAsignacionTarjeta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpTarjeta\frmBuscarTarjeta.Designer.vb">
+      <DependentUpon>frmBuscarTarjeta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpTarjeta\frmBuscarTarjeta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpTarjeta\Tarjeta.vb" />
+    <Compile Include="crpTransferencia\frmGiroInt.Designer.vb">
+      <DependentUpon>frmGiroInt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpTransferencia\frmGiroInt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpIncautacion\frmIncautacion.Designer.vb">
+      <DependentUpon>frmIncautacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpIncautacion\frmIncautacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicial.Designer.vb">
+      <DependentUpon>frmInicial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCajero\frmCalculadora.Designer.vb">
+      <DependentUpon>frmCalculadora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpCajero\frmCalculadora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCajero\frmCliente.Designer.vb">
+      <DependentUpon>frmCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpCajero\frmCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCajero\frmSolicitud.Designer.vb">
+      <DependentUpon>frmSolicitud.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpCajero\frmSolicitud.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCajero\frmCajero.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCajero\frmCajero.Designer.vb">
+      <DependentUpon>frmCajero.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCajero\frmOperaciones.Designer.vb">
+      <DependentUpon>frmOperaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpCajero\frmOperaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCajero\frmBilletaje.Designer.vb">
+      <DependentUpon>frmBilletaje.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpCajero\frmBilletaje.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpCajero\frmBalance.Designer.vb">
+      <DependentUpon>frmBalance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpCajero\frmBalance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpReclamo\frmReclamo.Designer.vb">
+      <DependentUpon>frmReclamo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpReclamo\frmReclamo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpReclamo\frmReclamo2.Designer.vb">
+      <DependentUpon>frmReclamo2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpReclamo\frmReclamo2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpPCC01\frmPCC01.Designer.vb">
+      <DependentUpon>frmPCC01.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpPCC01\frmPCC01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpPCC01\frmPCC012.Designer.vb">
+      <DependentUpon>frmPCC012.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpPCC01\frmPCC012.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpPCC01\frmPCC013.Designer.vb">
+      <DependentUpon>frmPCC013.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpPCC01\frmPCC013.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpPCC01\frmPCC014.Designer.vb">
+      <DependentUpon>frmPCC014.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpPCC01\frmPCC014.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpTransferencia\frmTransferenciaInt.Designer.vb">
+      <DependentUpon>frmTransferenciaInt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpTransferencia\frmTransferenciaInt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crpListas\frmListas.Designer.vb">
+      <DependentUpon>frmListas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crpListas\frmListas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="crpCACPN\CACPN.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="crpCACPJ\frmCACPJ1.resx">
+      <DependentUpon>frmCACPJ1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpCACPJ\frmCACPJ2.resx">
+      <DependentUpon>frmCACPJ2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpCACPJ\frmCACPJ3.resx">
+      <DependentUpon>frmCACPJ3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpCACPJ\frmCACPJ4.resx">
+      <DependentUpon>frmCACPJ4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpPlataforma\frmBuscarFormulario.resx">
+      <DependentUpon>frmBuscarFormulario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpCACPN\frmCACPN4.resx">
+      <DependentUpon>frmCACPN4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpCACPN\frmCACPN1.resx">
+      <DependentUpon>frmCACPN1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpCACPN\frmCACPN2.resx">
+      <DependentUpon>frmCACPN2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpCACPN\frmCACPN3.resx">
+      <DependentUpon>frmCACPN3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpCACPN\frmCACPN5.resx">
+      <DependentUpon>frmCACPN5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpPlataforma\frmPlataforma.resx">
+      <DependentUpon>frmPlataforma.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpCajero\frmCalculadora.resx">
+      <DependentUpon>frmCalculadora.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpCajero\frmCliente.resx">
+      <DependentUpon>frmCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpTarjeta\frmAsignacionTarjeta.resx">
+      <DependentUpon>frmAsignacionTarjeta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpTarjeta\frmBuscarTarjeta.resx">
+      <DependentUpon>frmBuscarTarjeta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpTransferencia\frmGiroInt.resx">
+      <DependentUpon>frmGiroInt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpIncautacion\frmIncautacion.resx">
+      <DependentUpon>frmIncautacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicial.resx">
+      <DependentUpon>frmInicial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpCajero\frmSolicitud.resx">
+      <DependentUpon>frmSolicitud.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpCajero\frmCajero.resx">
+      <DependentUpon>frmCajero.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpCajero\frmOperaciones.resx">
+      <DependentUpon>frmOperaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpCajero\frmBilletaje.resx">
+      <DependentUpon>frmBilletaje.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpCajero\frmBalance.resx">
+      <DependentUpon>frmBalance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpReclamo\frmReclamo.resx">
+      <DependentUpon>frmReclamo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpReclamo\frmReclamo2.resx">
+      <DependentUpon>frmReclamo2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpPCC01\frmPCC01.resx">
+      <DependentUpon>frmPCC01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpPCC01\frmPCC012.resx">
+      <DependentUpon>frmPCC012.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpPCC01\frmPCC013.resx">
+      <DependentUpon>frmPCC013.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpPCC01\frmPCC014.resx">
+      <DependentUpon>frmPCC014.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpTransferencia\frmTransferenciaInt.resx">
+      <DependentUpon>frmTransferenciaInt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpListas\frmListas.resx">
+      <DependentUpon>frmListas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="CofinV3_TemporaryKey.pfx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\iconos\cofin portada.png" />
+    <Content Include="logo5.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
