@@ -108,10 +108,10 @@ Public Class frmCACPJ1
         CACPJ.RegistroActualCACPJ.id_telefonoempresa = txtTelefonoEmpresa.Text
         CACPJ.RegistroActualCACPJ.id_referenciacomercial = txtReferenciaComercial.Text
         If chbxSucursal1.Checked Then
-            CACPJ.RegistroActualCACPJ.id_sucursal = "SI"
+            CACPJ.RegistroActualCACPJ.tiene_sucursal = "SI"
         End If
         If chbxSucursal2.Checked Then
-            CACPJ.RegistroActualCACPJ.id_sucursal = "NO"
+            CACPJ.RegistroActualCACPJ.tiene_sucursal = "NO"
         End If
         CACPJ.RegistroActualCACPJ.id_nombresucursal = txtNombreSucursal.Text
         CACPJ.RegistroActualCACPJ.id_direccionsucursal = txtDireccionSucursal.Text
@@ -168,8 +168,8 @@ Public Class frmCACPJ1
                 txtReferenciaComercial.Text = .id_referenciacomercial
 
                 ' --- Sucursal ---
-                chbxSucursal1.Checked = (.id_sucursal = "SI")
-                chbxSucursal2.Checked = (.id_sucursal = "NO")
+                chbxSucursal1.Checked = (.tiene_sucursal = "SI")
+                chbxSucursal2.Checked = (.tiene_sucursal = "NO")
                 txtNombreSucursal.Text = .id_nombresucursal
                 txtDireccionSucursal.Text = .id_direccionsucursal
 

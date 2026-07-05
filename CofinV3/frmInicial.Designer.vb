@@ -38,7 +38,7 @@ Partial Class frmInicial
         Me.btnCajero.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCajero.ForeColor = System.Drawing.Color.White
         Me.btnCajero.Location = New System.Drawing.Point(502, 128)
-        Me.btnCajero.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCajero.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCajero.Name = "btnCajero"
         Me.btnCajero.Size = New System.Drawing.Size(172, 41)
         Me.btnCajero.TabIndex = 0
@@ -54,7 +54,7 @@ Partial Class frmInicial
         Me.btnPlataforma.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPlataforma.ForeColor = System.Drawing.Color.White
         Me.btnPlataforma.Location = New System.Drawing.Point(502, 204)
-        Me.btnPlataforma.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnPlataforma.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPlataforma.Name = "btnPlataforma"
         Me.btnPlataforma.Size = New System.Drawing.Size(172, 41)
         Me.btnPlataforma.TabIndex = 1
@@ -66,7 +66,7 @@ Partial Class frmInicial
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
         Me.PictureBox1.Image = Global.CofinV3.My.Resources.Resources.cofin_portada
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(479, 366)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -82,8 +82,11 @@ Partial Class frmInicial
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnPlataforma)
         Me.Controls.Add(Me.btnCajero)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmInicial"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "COFIN"

@@ -24,8 +24,8 @@ Public Class frmBuscarFormulario
             Exit Sub
         End If
 
-        CargarRegistrosDesdeCSVCACPN(rutaCACPN)
-        CargarRegistrosDesdeCSVCACPJ(rutaCACPJ)
+        CargarDatosCACPN()
+        CargarDatosCACPJ()
     End Sub
 
     ' === BOTÓN BUSCAR ===

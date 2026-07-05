@@ -2,6 +2,11 @@
 Imports System.Linq
 
 Module CACPJ
+
+    Private rutaArchivo As String = "csv/Plataforma/BCP_cr_act_pers_juridica.csv"
+    Private rutaBase As String = "csv/Plataforma/Bases/BCP_cr_act_pers_juridica_Base.csv"
+
+
     ' --- Clase de registro ---
     Public Class registroCACPJ
         ' --- Datos de empresa ---
@@ -9,7 +14,7 @@ Module CACPJ
         Public id_nombrecomercial As String
         Public id_telefonoempresa As String
         Public id_referenciacomercial As String
-        Public id_sucursal As String
+        Public tiene_sucursal As String
         Public id_nombresucursal As String
         Public id_direccionsucursal As String
 
@@ -124,7 +129,7 @@ Module CACPJ
         ' --- Método para convertir el registro a CSV ---
         Public Function ToCsv() As String
             Dim valores = Me.GetType().GetFields().Select(Function(f) f.GetValue(Me)?.ToString()).ToArray()
-            Dim valoresConComillas = valores.Select(Function(v) $"'{v}'")
+            Dim valoresConComillas = valores.Select(Function(v) $" '{v}'")
             Return String.Join(",", valoresConComillas)
         End Function
     End Class
@@ -141,14 +146,14 @@ Module CACPJ
     End Sub
 
     ' --- Cargar registros desde CSV ---
-    Public Sub CargarRegistrosDesdeCSVCACPJ(rutaArchivo As String)
+    Private Sub CargarRegistrosDesdeCSVCACPJ()
         ListaRegistrosCACPJ.Clear()
 
         If Not File.Exists(rutaArchivo) Then Exit Sub
 
         Dim lineas = File.ReadAllLines(rutaArchivo)
 
-        For Each linea In lineas
+        For Each linea In lineas.Skip(1)
             Dim valores = linea.Split(","c).Select(Function(v) v.Trim("'"c)).ToArray()
             Dim campos = GetType(registroCACPJ).GetFields()
 
@@ -169,5 +174,25 @@ Module CACPJ
     Public Function BuscarRegistroPorIDCACPJ(id As String) As registroCACPJ
         Return ListaRegistrosCACPJ.FirstOrDefault(Function(r) r.id_razonsocial.Trim() = id.Trim())
     End Function
+
+    Public Function CargarDatosCACPJ() As List(Of registroCACPJ)
+        CargarRegistrosDesdeCSVCACPJ()
+        Return ListaRegistrosCACPJ
+    End Function
+
+    Public Sub RestaurarDatosBaseCACPJ()
+        If Not File.Exists(rutaBase) Then
+            MessageBox.Show("No se encontró el archivo base en: " & rutaBase, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+
+        File.Copy(rutaBase, rutaArchivo, True)
+
+        CargarDatosCACPJ()
+
+        MessageBox.Show("La lista se ha restaurado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        Console.WriteLine("Datos restaurados de CACPJ")
+    End Sub
 
 End Module

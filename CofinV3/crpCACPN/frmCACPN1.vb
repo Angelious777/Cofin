@@ -7,16 +7,36 @@ Public Class frmCACPN1
     Public IDcarga As String
 
     Private Sub btnSiguiente_Click(sender As Object, e As EventArgs) Handles btnSiguiente.Click
+
+        Dim existeRegistro As Boolean = CACPN.VerificarNuevoRegistroCACPN(txtNro.Text)
+
+        If existeRegistro Then
+            CargarDatosCACPN()
+            MessageBox.Show("El registro ya existe.
+                            Puedes actualizar el formulario del usuario o puedes cambiar el nro de identificacion",
+                            "Registro Duplicado",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning)
+            Exit Sub
+        Else
+            MessageBox.Show("Todo normal")
+        End If
+
         If CamposNecesariosValidos() Then
             RegistrarDatos()
+
             Dim frmcacp2 As New frmCACPN2(Me)
             If Not String.IsNullOrEmpty(IDcarga) Then
                 frmcacp2.nuevo = False
             End If
+
             frmcacp2.Show()
             Me.Hide()
         Else
-            MessageBox.Show("Campos Faltantes")
+            MessageBox.Show("Campos Faltantes",
+                            "Validación",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error)
         End If
     End Sub
 
@@ -95,6 +115,8 @@ Public Class frmCACPN1
                 txtCorreo.Text = .correo
             End With
         End If
+
+        checkedSeleccionado = chbxEEUU1.Checked Or chbxEEUU2.Checked
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
