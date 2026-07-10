@@ -4,39 +4,34 @@ Imports System.IO
 Public Class frmCACPN1
 
     Private checkedSeleccionado = False
-    Public IDcarga As String
+
+    Public nuevo As Boolean = True
 
     Private Sub btnSiguiente_Click(sender As Object, e As EventArgs) Handles btnSiguiente.Click
 
         Dim existeRegistro As Boolean = CACPN.VerificarNuevoRegistroCACPN(txtNro.Text)
 
         If existeRegistro Then
-            CargarDatosCACPN()
             MessageBox.Show("El registro ya existe.
-                            Puedes actualizar el formulario del usuario o puedes cambiar el nro de identificacion",
-                            "Registro Duplicado",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning)
+
+Puedes actualizar el formulario del usuario o puedes cambiar el nro de identificacion",
+            "Registro Duplicado",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Warning)
+
             Exit Sub
-        Else
-            MessageBox.Show("Todo normal")
         End If
 
-        If CamposNecesariosValidos() Then
+        If ValidarCampos() Then
             RegistrarDatos()
 
             Dim frmcacp2 As New frmCACPN2(Me)
-            If Not String.IsNullOrEmpty(IDcarga) Then
+            If Not nuevo Then
                 frmcacp2.nuevo = False
             End If
 
             frmcacp2.Show()
             Me.Hide()
-        Else
-            MessageBox.Show("Campos Faltantes",
-                            "Validación",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error)
         End If
     End Sub
 
@@ -59,11 +54,11 @@ Public Class frmCACPN1
     End Sub
 
     Private Sub frmCACPN1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Not String.IsNullOrEmpty(IDcarga) Then
-            Rellenarcampos(IDcarga)
+        If Not nuevo Then
+            Rellenarcampos()
         End If
 
-        ' CARGAR IMAGEN DEL BANCO SELECCIONAO
+        ' CARGAR IMAGEN DEL BANCO SELECCIONADO
         Dim nombreBanco As String = CACPN.RegistroActualCACPN.nombre_banco
         Dim rutaImagen As String = String.Empty
 
@@ -83,10 +78,12 @@ Public Class frmCACPN1
         Else
             MessageBox.Show("No se encontró el logo del banco: " & nombreBanco)
         End If
+
+        CargarDatosCACPN()
     End Sub
 
-    Private Sub Rellenarcampos(id As String)
-        Dim reg = BuscarRegistroPorIDCACPN(id)
+    Private Sub Rellenarcampos()
+        Dim reg = CACPN.RegistroActualCACPN
         If reg IsNot Nothing Then
             With reg
                 txtNombreTitular.Text = .datos_titular
@@ -132,13 +129,39 @@ Public Class frmCACPN1
         End If
     End Sub
 
-    Private Function CamposNecesariosValidos() As Boolean
-        ' cantidad de campos necesarios para permitir ir al siguiente
-        If checkedSeleccionado Then
-            Return True
-        Else
+    Private Function ValidarCampos() As Boolean
+
+        If String.IsNullOrWhiteSpace(txtNombreTitular.Text) Then
+            MessageBox.Show("El nombre de titular es obligatorio.", "Campo Requerido", MessageBoxButtons.OK)
+            txtNombreTitular.Focus()
             Return False
         End If
+        If String.IsNullOrWhiteSpace(txtNro.Text) Then
+            MessageBox.Show("El Nro de Identidad es obligatorio", "Campo Requerido", MessageBoxButtons.OK)
+            txtNro.Focus()
+            Return False
+        End If
+        If Not checkedSeleccionado Then
+            MessageBox.Show("Seleccione la casilla de residencia de EEUU.", "Campo Requerido", MessageBoxButtons.OK)
+            Return False
+        End If
+        If String.IsNullOrWhiteSpace(txtCalleAv.Text) Then
+            MessageBox.Show("La Direccion de Calle o Avenida es obligatorio.", "Campo Requerido", MessageBoxButtons.OK)
+            txtCalleAv.Focus()
+            Return False
+        End If
+        If String.IsNullOrWhiteSpace(txtNumDomicilio.Text) Then
+            MessageBox.Show("El número de domicilio es obligatorio.", "Campo Requerido", MessageBoxButtons.OK)
+            txtNumDomicilio.Focus()
+            Return False
+        End If
+        If String.IsNullOrWhiteSpace(txtCorreo.Text) Then
+            MessageBox.Show("El correo electrónico es obligatorio.", "Campo Requerido", MessageBoxButtons.OK)
+            txtCorreo.Focus()
+            Return False
+        End If
+
+        Return True
     End Function
 
     Private Sub RegistrarDatos()

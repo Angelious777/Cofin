@@ -15,37 +15,7 @@
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        CACPN.RegistroActualCACPN.banco1 = txtBanco1.Text
-        CACPN.RegistroActualCACPN.tipo_cuenta1 = txtTipoCuenta1.Text
-        CACPN.RegistroActualCACPN.banco2 = txtBanco2.Text
-        CACPN.RegistroActualCACPN.tipo_cuenta2 = txtTipoCuenta2.Text
-        CACPN.RegistroActualCACPN.banco3 = txtBanco3.Text
-        CACPN.RegistroActualCACPN.tipo_cuenta3 = txtTipoCuenta3.Text
-
-        CACPN.RegistroActualCACPN.nombre_referente1 = txtNomReferente1.Text
-        CACPN.RegistroActualCACPN.direccion1 = txtRefDireccion1.Text
-        CACPN.RegistroActualCACPN.telefono1 = txtTelfReferente1.Text
-
-        CACPN.RegistroActualCACPN.nombre_referente2 = txtNomReferente2.Text
-        CACPN.RegistroActualCACPN.direccion2 = txtRefDireccion2.Text
-        CACPN.RegistroActualCACPN.telefono2 = txtTelfReferente2.Text
-
-        CACPN.RegistroActualCACPN.nombre_referente3 = txtNomReferente3.Text
-        CACPN.RegistroActualCACPN.direccion3 = txtRefDireccion3.Text
-        CACPN.RegistroActualCACPN.telefono3 = txtTelfReferente3.Text
-
-        CACPN.RegistroActualCACPN.nombre_empresa1 = txtNomEmpresa1.Text
-        CACPN.RegistroActualCACPN.nombre_empresa2 = txtNomEmpresa2.Text
-        CACPN.RegistroActualCACPN.nombre_empresa3 = txtNomEmpresa3.Text
-
-        CACPN.RegistroActualCACPN.direccion_empresa1 = txtDirEmpresa1.Text
-        CACPN.RegistroActualCACPN.direccion_empresa2 = txtDirEmpresa2.Text
-        CACPN.RegistroActualCACPN.direccion_empresa3 = txtDirEmpresa3.Text
-
-        CACPN.RegistroActualCACPN.telefono_empresa1 = txtTelfEmpresa1.Text
-        CACPN.RegistroActualCACPN.telefono_empresa2 = txtTelfEmpresa2.Text
-        CACPN.RegistroActualCACPN.telefono_empresa3 = txtTelfEmpresa3.Text
+    Private Sub btnSiguiente_Click(sender As Object, e As EventArgs) Handles btnSiguiente.Click
 
         formCACPN5 = New frmCACPN5(Me)
         If Not nuevo Then
@@ -98,5 +68,68 @@
     Private Sub btnAnterior_Click(sender As Object, e As EventArgs) Handles btnAnterior.Click
         anteriorForm.Show()
         Me.Close()
+    End Sub
+
+    Private Function ValidarCampos() As Boolean
+        If String.IsNullOrWhiteSpace(txtBanco1.Text) Then
+            MessageBox.Show("El campo de al menos un banco es obligatorio.", "Campo Requerido", MessageBoxButtons.OK)
+            txtBanco1.Focus()
+            Return False
+        End If
+        If String.IsNullOrWhiteSpace(txtTipoCuenta1.Text) Then
+            MessageBox.Show("El campo de tipo de cuenta de al menos un banco es obligatorio.", "Campo Requerido", MessageBoxButtons.OK)
+            txtTipoCuenta1.Focus()
+            Return False
+        End If
+        If String.IsNullOrWhiteSpace(txtNomReferente1.Text) Then
+            MessageBox.Show("El campo de nombre de al menos un referente es obligatorio.", "Campo Requerido", MessageBoxButtons.OK)
+            txtNomReferente1.Focus()
+            Return False
+        End If
+        If String.IsNullOrWhiteSpace(txtRefDireccion1.Text) Then
+            MessageBox.Show("El campo de direccion de al menos un referente es obligatorio.", "Campo Requerido", MessageBoxButtons.OK)
+            txtTipoCuenta1.Focus()
+            Return False
+        End If
+        If String.IsNullOrWhiteSpace(txtTelfReferente1.Text) Then
+            MessageBox.Show("El campo de telefono de al menos un referente es obligatorio.", "Campo Requerido", MessageBoxButtons.OK)
+            txtTelfReferente1.Focus()
+            Return False
+        End If
+
+        Return True
+    End Function
+
+    Private Sub RegistrarDatos()
+        CACPN.RegistroActualCACPN.banco1 = txtBanco1.Text
+        CACPN.RegistroActualCACPN.tipo_cuenta1 = txtTipoCuenta1.Text
+        CACPN.RegistroActualCACPN.banco2 = txtBanco2.Text
+        CACPN.RegistroActualCACPN.tipo_cuenta2 = txtTipoCuenta2.Text
+        CACPN.RegistroActualCACPN.banco3 = txtBanco3.Text
+        CACPN.RegistroActualCACPN.tipo_cuenta3 = txtTipoCuenta3.Text
+
+        CACPN.RegistroActualCACPN.nombre_referente1 = txtNomReferente1.Text
+        CACPN.RegistroActualCACPN.direccion1 = txtRefDireccion1.Text
+        CACPN.RegistroActualCACPN.telefono1 = txtTelfReferente1.Text
+
+        CACPN.RegistroActualCACPN.nombre_referente2 = txtNomReferente2.Text
+        CACPN.RegistroActualCACPN.direccion2 = txtRefDireccion2.Text
+        CACPN.RegistroActualCACPN.telefono2 = txtTelfReferente2.Text
+
+        CACPN.RegistroActualCACPN.nombre_referente3 = txtNomReferente3.Text
+        CACPN.RegistroActualCACPN.direccion3 = txtRefDireccion3.Text
+        CACPN.RegistroActualCACPN.telefono3 = txtTelfReferente3.Text
+
+        CACPN.RegistroActualCACPN.nombre_empresa1 = txtNomEmpresa1.Text
+        CACPN.RegistroActualCACPN.nombre_empresa2 = txtNomEmpresa2.Text
+        CACPN.RegistroActualCACPN.nombre_empresa3 = txtNomEmpresa3.Text
+
+        CACPN.RegistroActualCACPN.direccion_empresa1 = txtDirEmpresa1.Text
+        CACPN.RegistroActualCACPN.direccion_empresa2 = txtDirEmpresa2.Text
+        CACPN.RegistroActualCACPN.direccion_empresa3 = txtDirEmpresa3.Text
+
+        CACPN.RegistroActualCACPN.telefono_empresa1 = txtTelfEmpresa1.Text
+        CACPN.RegistroActualCACPN.telefono_empresa2 = txtTelfEmpresa2.Text
+        CACPN.RegistroActualCACPN.telefono_empresa3 = txtTelfEmpresa3.Text
     End Sub
 End Class

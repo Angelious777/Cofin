@@ -22,6 +22,7 @@ Partial Class frmCACPN1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCACPN1))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -74,6 +75,8 @@ Partial Class frmCACPN1
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pctbxImagenBanco = New System.Windows.Forms.PictureBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Label27 = New System.Windows.Forms.Label()
         CType(Me.pctbxImagenBanco, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -115,7 +118,7 @@ Partial Class frmCACPN1
         '
         'txtNombreTitular
         '
-        Me.txtNombreTitular.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtNombreTitular.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtNombreTitular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombreTitular.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtNombreTitular.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -151,7 +154,7 @@ Partial Class frmCACPN1
         '
         'txtNro
         '
-        Me.txtNro.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtNro.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtNro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNro.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtNro.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -452,7 +455,7 @@ Partial Class frmCACPN1
         '
         'txtCalleAv
         '
-        Me.txtCalleAv.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtCalleAv.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtCalleAv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCalleAv.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtCalleAv.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -476,7 +479,7 @@ Partial Class frmCACPN1
         '
         'txtNumDomicilio
         '
-        Me.txtNumDomicilio.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtNumDomicilio.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtNumDomicilio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNumDomicilio.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtNumDomicilio.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -632,7 +635,7 @@ Partial Class frmCACPN1
         '
         'txtCorreo
         '
-        Me.txtCorreo.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtCorreo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCorreo.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtCorreo.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -697,6 +700,14 @@ Partial Class frmCACPN1
         Me.pctbxImagenBanco.TabIndex = 51
         Me.pctbxImagenBanco.TabStop = False
         '
+        'Label27
+        '
+        Me.Label27.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Label27.Location = New System.Drawing.Point(19, 454)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(619, 3)
+        Me.Label27.TabIndex = 52
+        '
         'frmCACPN1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -755,6 +766,7 @@ Partial Class frmCACPN1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label27)
         Me.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -821,4 +833,6 @@ Partial Class frmCACPN1
     Friend WithEvents Label17 As Label
     Friend WithEvents pctbxImagenBanco As PictureBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents Label27 As Label
 End Class

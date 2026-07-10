@@ -84,7 +84,7 @@ Public Class frmBuscarFormulario
         If campo = "CACPN" Then
             CACPN.RegistroActualCACPN = BuscarRegistroPorIDCACPN(nroID)
             Dim frm1 As New frmCACPN1()
-            frm1.IDcarga = nroID
+            frm1.nuevo = False
             frm1.Show()
             Me.Close()
 

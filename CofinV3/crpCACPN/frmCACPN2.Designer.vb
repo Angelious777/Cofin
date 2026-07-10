@@ -75,6 +75,8 @@ Partial Class frmCACPN2
         Me.chbxCargoPolitico1 = New System.Windows.Forms.CheckBox()
         Me.btnAnterior = New System.Windows.Forms.Button()
         Me.btnSiguiente = New System.Windows.Forms.Button()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label3
@@ -103,7 +105,7 @@ Partial Class frmCACPN2
         '
         'txtNombreEmpresa
         '
-        Me.txtNombreEmpresa.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtNombreEmpresa.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtNombreEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombreEmpresa.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtNombreEmpresa.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -115,7 +117,7 @@ Partial Class frmCACPN2
         '
         'txtNit
         '
-        Me.txtNit.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtNit.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtNit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNit.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtNit.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -211,7 +213,7 @@ Partial Class frmCACPN2
         '
         'txtCalleAvLaboral
         '
-        Me.txtCalleAvLaboral.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtCalleAvLaboral.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtCalleAvLaboral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCalleAvLaboral.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtCalleAvLaboral.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -235,7 +237,7 @@ Partial Class frmCACPN2
         '
         'txtNumeroLaboral
         '
-        Me.txtNumeroLaboral.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtNumeroLaboral.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtNumeroLaboral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNumeroLaboral.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtNumeroLaboral.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -451,7 +453,7 @@ Partial Class frmCACPN2
         '
         'txtCargoPuestoLaboral
         '
-        Me.txtCargoPuestoLaboral.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtCargoPuestoLaboral.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtCargoPuestoLaboral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCargoPuestoLaboral.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtCargoPuestoLaboral.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -715,6 +717,22 @@ Partial Class frmCACPN2
         Me.btnSiguiente.Text = "SIGUIENTE"
         Me.btnSiguiente.UseVisualStyleBackColor = False
         '
+        'Label27
+        '
+        Me.Label27.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Label27.Location = New System.Drawing.Point(47, 597)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(648, 3)
+        Me.Label27.TabIndex = 55
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Label1.Location = New System.Drawing.Point(50, 632)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(855, 3)
+        Me.Label1.TabIndex = 56
+        '
         'frmCACPN2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -722,6 +740,8 @@ Partial Class frmCACPN2
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1026, 714)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label27)
         Me.Controls.Add(Me.btnAnterior)
         Me.Controls.Add(Me.btnSiguiente)
         Me.Controls.Add(Me.chbxCargoPolitico2)
@@ -838,4 +858,6 @@ Partial Class frmCACPN2
     Friend WithEvents chbxCargoPolitico1 As CheckBox
     Friend WithEvents btnAnterior As Button
     Friend WithEvents btnSiguiente As Button
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label1 As Label
 End Class

@@ -4,11 +4,11 @@ Public Class frmCACPN5
 
     Private anteriorForm As Form
 
-    Public nuevo = True
+    Public nuevo As Boolean = True
 
-    Private firma1 = False
-    Private firma2 = False
-    Private firma3 = False
+    Private firma1 As Boolean = False
+    Private firma2 As Boolean = False
+    Private firma3 As Boolean = False
 
     Dim rnd As New Random()
     Dim img1 As String
@@ -32,35 +32,26 @@ Public Class frmCACPN5
     End Sub
 
     Private Sub btnFirma1_Click(sender As Object, e As EventArgs) Handles btnFirma1.Click
-        Dim num As Integer = rnd.Next(1, 10)
-        img1 = $"firma000{num}.png"
-        firma1 = True
-
-        Dim rutaCompleta As String = Path.Combine(rutaFirmas, img1)
-        If File.Exists(rutaCompleta) Then
-            pctbxFirma1.Image = Image.FromFile(rutaCompleta)
-        End If
+        GenerarImagenFirma(img1, firma1, pctbxFirma1)
     End Sub
 
     Private Sub btnFirma2_Click(sender As Object, e As EventArgs) Handles btnFirma2.Click
-        Dim num As Integer = rnd.Next(1, 10)
-        img2 = $"firma000{num}.png"
-        firma2 = True
-
-        Dim rutaCompleta As String = Path.Combine(rutaFirmas, img2)
-        If File.Exists(rutaCompleta) Then
-            pctbxFirma2.Image = Image.FromFile(rutaCompleta)
-        End If
+        GenerarImagenFirma(img2, firma2, pctbxFirma2)
     End Sub
 
     Private Sub btnFirma3_Click(sender As Object, e As EventArgs) Handles btnFirma3.Click
-        Dim num As Integer = rnd.Next(1, 10)
-        img3 = $"firma000{num}.png"
-        firma3 = True
+        GenerarImagenFirma(img3, firma3, pctbxFirma3)
+    End Sub
 
-        Dim rutaCompleta As String = Path.Combine(rutaFirmas, img3)
-        If File.Exists(rutaCompleta) Then
-            pctbxFirma3.Image = Image.FromFile(rutaCompleta)
+    Private Sub GenerarImagenFirma(ByRef img As String, ByRef firma As Boolean, pctbFirma As PictureBox)
+        Dim num As Integer = rnd.Next(1, 10)
+        img = $"firma000{num}.png"
+        firma = True
+
+
+        Dim rutacompleta As String = Path.Combine(rutaFirmas, img)
+        If File.Exists(rutacompleta) Then
+            pctbFirma.Image = Image.FromFile(rutacompleta)
         End If
     End Sub
 

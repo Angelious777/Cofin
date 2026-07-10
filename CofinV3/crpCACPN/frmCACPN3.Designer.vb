@@ -61,7 +61,7 @@ Partial Class frmCACPN3
         Me.Label22 = New System.Windows.Forms.Label()
         Me.txtGiroActConyuge = New System.Windows.Forms.TextBox()
         Me.btnAnterior = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSiguiente = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label2
@@ -88,7 +88,7 @@ Partial Class frmCACPN3
         '
         'txtEnvioCorrespondencia
         '
-        Me.txtEnvioCorrespondencia.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtEnvioCorrespondencia.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtEnvioCorrespondencia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEnvioCorrespondencia.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtEnvioCorrespondencia.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -505,21 +505,21 @@ Partial Class frmCACPN3
         Me.btnAnterior.Text = "CANCELAR"
         Me.btnAnterior.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnSiguiente
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(148, Byte), Integer))
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button1.Location = New System.Drawing.Point(844, 632)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(153, 41)
-        Me.Button1.TabIndex = 55
-        Me.Button1.Text = "SIGUIENTE"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnSiguiente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(148, Byte), Integer))
+        Me.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSiguiente.FlatAppearance.BorderSize = 0
+        Me.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSiguiente.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.btnSiguiente.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnSiguiente.Location = New System.Drawing.Point(844, 632)
+        Me.btnSiguiente.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSiguiente.Name = "btnSiguiente"
+        Me.btnSiguiente.Size = New System.Drawing.Size(153, 41)
+        Me.btnSiguiente.TabIndex = 55
+        Me.btnSiguiente.Text = "SIGUIENTE"
+        Me.btnSiguiente.UseVisualStyleBackColor = False
         '
         'frmCACPN3
         '
@@ -529,7 +529,7 @@ Partial Class frmCACPN3
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1026, 714)
         Me.Controls.Add(Me.btnAnterior)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSiguiente)
         Me.Controls.Add(Me.txtGiroActConyuge)
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.txtResiConyuge)
@@ -617,5 +617,5 @@ Partial Class frmCACPN3
     Friend WithEvents Label22 As Label
     Friend WithEvents txtGiroActConyuge As TextBox
     Friend WithEvents btnAnterior As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSiguiente As Button
 End Class

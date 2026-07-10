@@ -175,6 +175,11 @@ Module CACPJ
         Return ListaRegistrosCACPJ.FirstOrDefault(Function(r) r.id_razonsocial.Trim() = id.Trim())
     End Function
 
+    Public Function VerificarNuevoRegistroCACPJ(id_razonocial As String) As Boolean
+        ' Verifica si el ID ya existe en la lista de registros
+        Return ListaRegistrosCACPJ.Any(Function(r) r.id_razonsocial.Trim() = id_razonocial.Trim())
+    End Function
+
     Public Function CargarDatosCACPJ() As List(Of registroCACPJ)
         CargarRegistrosDesdeCSVCACPJ()
         Return ListaRegistrosCACPJ

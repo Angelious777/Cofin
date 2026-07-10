@@ -5,33 +5,47 @@ Public Class frmCACPJ1
     Public nuevo As Boolean = True
 
     Private Sub frmCACPJ1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If nuevo Then
-            ' CARGAR IMAGEN DEL BANCO SELECCIONAO
-            Dim nombreBanco As String = CACPJ.RegistroActualCACPJ.nombre_banco
-            Dim rutaImagen As String = String.Empty
-
-            If nombreBanco = "BCP" Then
-                rutaImagen = Path.Combine(Application.StartupPath, "img\iconos", "bcp_logo2.png")
-            End If
-            If nombreBanco = "BISA" Then
-                rutaImagen = Path.Combine(Application.StartupPath, "img\iconos", "banco_bisa.png")
-            End If
-            If nombreBanco = "ECONOMICO" Then
-                rutaImagen = Path.Combine(Application.StartupPath, "img\iconos", "banco_economico.png")
-            End If
-
-
-            If Not String.IsNullOrEmpty(rutaImagen) AndAlso IO.File.Exists(rutaImagen) Then
-                pctbxImagenBanco.Image = Image.FromFile(rutaImagen)
-            Else
-                MessageBox.Show("No se encontró el logo del banco: " & nombreBanco)
-            End If
-        Else
+        If Not nuevo Then
             RellenarCampos()
         End If
+
+        Dim nombreBanco As String = CACPJ.RegistroActualCACPJ.nombre_banco
+        Dim rutaImagen As String = String.Empty
+
+        If nombreBanco = "BCP" Then
+            rutaImagen = Path.Combine(Application.StartupPath, "img\iconos", "bcp_logo2.png")
+        End If
+        If nombreBanco = "BISA" Then
+            rutaImagen = Path.Combine(Application.StartupPath, "img\iconos", "banco_bisa.png")
+        End If
+        If nombreBanco = "ECONOMICO" Then
+            rutaImagen = Path.Combine(Application.StartupPath, "img\iconos", "banco_economico.png")
+        End If
+
+        If Not String.IsNullOrEmpty(rutaImagen) AndAlso IO.File.Exists(rutaImagen) Then
+            pctbxImagenBanco.Image = Image.FromFile(rutaImagen)
+        Else
+            MessageBox.Show("No se encontró el logo del banco: " & nombreBanco)
+        End If
+
+        CargarDatosCACPJ()
     End Sub
 
     Private Sub btnSiguiente_Click(sender As Object, e As EventArgs) Handles btnSiguiente.Click
+
+        Dim existeRegistro As Boolean = CACPJ.VerificarNuevoRegistroCACPJ(txtRazonSocial.Text)
+
+        If existeRegistro Then
+            MessageBox.Show("El registro ya existe.
+
+Puedes actualizar el formulario del usuario o puedes cambiar el nro de identificacion",
+            "Registro Duplicado",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Warning)
+
+            Exit Sub
+        End If
+
         If ValidarCampos() Then
             RegistrarDatos()
 
@@ -39,6 +53,8 @@ Public Class frmCACPJ1
             If Not nuevo Then
                 frmcacpj2.nuevo = False
             End If
+
+
             frmcacpj2.Show()
             Me.Hide()
 

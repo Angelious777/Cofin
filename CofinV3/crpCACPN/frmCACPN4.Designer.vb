@@ -60,7 +60,7 @@ Partial Class frmCACPN4
         Me.txtNomEmpresa1 = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.btnAnterior = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSiguiente = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -101,7 +101,7 @@ Partial Class frmCACPN4
         '
         'txtBanco1
         '
-        Me.txtBanco1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtBanco1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtBanco1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtBanco1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtBanco1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -173,7 +173,7 @@ Partial Class frmCACPN4
         '
         'txtTipoCuenta1
         '
-        Me.txtTipoCuenta1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtTipoCuenta1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtTipoCuenta1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTipoCuenta1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtTipoCuenta1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -233,7 +233,7 @@ Partial Class frmCACPN4
         '
         'txtNomReferente1
         '
-        Me.txtNomReferente1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtNomReferente1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtNomReferente1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNomReferente1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtNomReferente1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -269,7 +269,7 @@ Partial Class frmCACPN4
         '
         'txtRefDireccion1
         '
-        Me.txtRefDireccion1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtRefDireccion1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtRefDireccion1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtRefDireccion1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtRefDireccion1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -317,7 +317,7 @@ Partial Class frmCACPN4
         '
         'txtTelfReferente1
         '
-        Me.txtTelfReferente1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtTelfReferente1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtTelfReferente1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTelfReferente1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtTelfReferente1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -511,21 +511,21 @@ Partial Class frmCACPN4
         Me.btnAnterior.Text = "ANTERIOR"
         Me.btnAnterior.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnSiguiente
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(148, Byte), Integer))
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold)
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button1.Location = New System.Drawing.Point(869, 629)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(127, 41)
-        Me.Button1.TabIndex = 57
-        Me.Button1.Text = "SIGUIENTE"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnSiguiente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(148, Byte), Integer))
+        Me.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSiguiente.FlatAppearance.BorderSize = 0
+        Me.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSiguiente.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold)
+        Me.btnSiguiente.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnSiguiente.Location = New System.Drawing.Point(869, 629)
+        Me.btnSiguiente.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSiguiente.Name = "btnSiguiente"
+        Me.btnSiguiente.Size = New System.Drawing.Size(127, 41)
+        Me.btnSiguiente.TabIndex = 57
+        Me.btnSiguiente.Text = "SIGUIENTE"
+        Me.btnSiguiente.UseVisualStyleBackColor = False
         '
         'frmCACPN4
         '
@@ -534,7 +534,7 @@ Partial Class frmCACPN4
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(1026, 714)
         Me.Controls.Add(Me.btnAnterior)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSiguiente)
         Me.Controls.Add(Me.txtTelfEmpresa3)
         Me.Controls.Add(Me.txtTelfEmpresa2)
         Me.Controls.Add(Me.txtTelfEmpresa1)
@@ -621,5 +621,5 @@ Partial Class frmCACPN4
     Friend WithEvents txtNomEmpresa1 As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents btnAnterior As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSiguiente As Button
 End Class
