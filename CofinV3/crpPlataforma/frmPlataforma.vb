@@ -6,7 +6,7 @@
     End Sub
 
     Private Sub btnCrearBCP_CACPN_Click(sender As Object, e As EventArgs) Handles btnCrearBCP_CACPN.Click
-        CACPN.NuevoRegistroCACPN()
+        CACPN.GenerarNuevoRegistroCACPN()
         CACPN.RegistroActualCACPN.nombre_banco = nombreBanco()
 
         Dim formCACPN1 As New frmCACPN1()

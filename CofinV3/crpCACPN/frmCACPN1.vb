@@ -165,31 +165,35 @@ Puedes actualizar el formulario del usuario o puedes cambiar el nro de identific
     End Function
 
     Private Sub RegistrarDatos()
-        CACPN.RegistroActualCACPN.datos_titular = txtNombreTitular.Text
-        CACPN.RegistroActualCACPN.ID_nro = txtNro.Text
-        CACPN.RegistroActualCACPN.ID_ext = txtExtension.Text
-        CACPN.RegistroActualCACPN.ID_tipo = txtTipo.Text
-        CACPN.RegistroActualCACPN.ID_sexo = txtSexo.Text
-        CACPN.RegistroActualCACPN.ID_fecnac = txtFecnac.Text
-        CACPN.RegistroActualCACPN.ID_nacionalidad = txtNacionalidad.Text
-        CACPN.RegistroActualCACPN.ID_2da_nacionalidad = txt2daNacionalidad.Text
-        CACPN.RegistroActualCACPN.ID_residente = txtResidente.Text
-        CACPN.RegistroActualCACPN.ID_pais_residencia = txtPaisResidencia.Text
-        CACPN.RegistroActualCACPN.ID_pais_nacimiento = txtPaisNacimiento.Text
-        If chbxEEUU1.Checked Then
-            CACPN.RegistroActualCACPN.ID_EEUU = "Si"
-        End If
-        If chbxEEUU2.Checked Then
-            CACPN.RegistroActualCACPN.ID_EEUU = "No"
-        End If
-        CACPN.RegistroActualCACPN.calle_av = txtCalleAv.Text
-        CACPN.RegistroActualCACPN.numero_domicilio = txtNumDomicilio.Text
-        CACPN.RegistroActualCACPN.calle_av2 = txtCalleAv2.Text
-        CACPN.RegistroActualCACPN.departamento = txtDepartamento.Text
-        CACPN.RegistroActualCACPN.provincia = txtProvincia.Text
-        CACPN.RegistroActualCACPN.distrito = txtDistrito.Text
-        CACPN.RegistroActualCACPN.telefono_fijo = txtTelFijo.Text
-        CACPN.RegistroActualCACPN.telefono_celular = txtTelCel.Text
-        CACPN.RegistroActualCACPN.correo = txtCorreo.Text
+        With CACPN.RegistroActualCACPN
+            .datos_titular = txtNombreTitular.Text
+            .ID_nro = txtNro.Text
+            .ID_ext = txtExtension.Text
+            .ID_tipo = txtTipo.Text
+            .ID_sexo = txtSexo.Text
+            .ID_fecnac = txtFecnac.Text
+            .ID_nacionalidad = txtNacionalidad.Text
+            .ID_2da_nacionalidad = txt2daNacionalidad.Text
+            .ID_residente = txtResidente.Text
+            .ID_pais_residencia = txtPaisResidencia.Text
+            .ID_pais_nacimiento = txtPaisNacimiento.Text
+
+            If chbxEEUU1.Checked Then
+                .ID_EEUU = "Si"
+            End If
+            If chbxEEUU2.Checked Then
+                .ID_EEUU = "No"
+            End If
+
+            .calle_av = txtCalleAv.Text
+            .numero_domicilio = txtNumDomicilio.Text
+            .calle_av2 = txtCalleAv2.Text
+            .departamento = txtDepartamento.Text
+            .provincia = txtProvincia.Text
+            .distrito = txtDistrito.Text
+            .telefono_fijo = txtTelFijo.Text
+            .telefono_celular = txtTelCel.Text
+            .correo = txtCorreo.Text
+        End With
     End Sub
 End Class

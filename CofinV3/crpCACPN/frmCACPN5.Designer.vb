@@ -101,7 +101,7 @@ Partial Class frmCACPN5
         '
         'txtLugarDeclaracion
         '
-        Me.txtLugarDeclaracion.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtLugarDeclaracion.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtLugarDeclaracion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtLugarDeclaracion.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtLugarDeclaracion.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -113,7 +113,7 @@ Partial Class frmCACPN5
         '
         'txtFecha1
         '
-        Me.txtFecha1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtFecha1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtFecha1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtFecha1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtFecha1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -137,7 +137,7 @@ Partial Class frmCACPN5
         '
         'txtFecha2
         '
-        Me.txtFecha2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtFecha2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtFecha2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtFecha2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtFecha2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
@@ -149,7 +149,7 @@ Partial Class frmCACPN5
         '
         'txtFecha3
         '
-        Me.txtFecha3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtFecha3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtFecha3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtFecha3.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtFecha3.ForeColor = System.Drawing.SystemColors.ControlDarkDark

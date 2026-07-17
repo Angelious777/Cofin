@@ -114,6 +114,7 @@
                 txtNit.Text = .nit
                 txtNegocioPropio.Text = .negocio_propio
                 txtActividadEconomica.Text = .actividad_economica
+
                 txtCalleAvLaboral.Text = .calle_av_laboral
                 txtNumeroLaboral.Text = .numero_laboral
                 txtCalleAvLaboral2.Text = .calle_av_laboral2
@@ -126,7 +127,9 @@
                 txtCargoPuestoLaboral.Text = .cargo_puesto_laboral
                 txtTiempoServLaboral.Text = .tiempo_servicio_laboral
                 txtFechaIngresoLaboral.Text = .fecha_ingreso_laboral
+
                 txtIngresoTotUS.Text = .ingreso_total_US
+
                 txtGiroActv1.Text = .giro_actividad_1
                 txtGiroActv2.Text = .giro_actividad_2
                 txtGiroActv3.Text = .giro_actividad_3
@@ -147,38 +150,44 @@
     End Sub
 
     Private Sub RegistrarDatos()
-        CACPN.RegistroActualCACPN.nombre_empresa = txtNombreEmpresa.Text
-        CACPN.RegistroActualCACPN.nit = txtNit.Text
-        CACPN.RegistroActualCACPN.negocio_propio = txtNegocioPropio.Text
-        CACPN.RegistroActualCACPN.actividad_economica = txtActividadEconomica.Text
-        CACPN.RegistroActualCACPN.calle_av_laboral = txtCalleAvLaboral.Text
-        CACPN.RegistroActualCACPN.numero_laboral = txtNumeroLaboral.Text
-        CACPN.RegistroActualCACPN.calle_av_laboral2 = txtCalleAvLaboral2.Text
-        CACPN.RegistroActualCACPN.departamento_laboral = txtDepartamentoLaboral.Text
-        CACPN.RegistroActualCACPN.provincia_laboral = txtProvinciaLaboral.Text
-        CACPN.RegistroActualCACPN.distrito_laboral = txtDistritoLaboral.Text
-        CACPN.RegistroActualCACPN.telefono_fijo_laboral = txtTelFijoLaboral.Text
-        CACPN.RegistroActualCACPN.telefono_celular_laboral = txtTelCelLaboral.Text
-        CACPN.RegistroActualCACPN.correo_laboral = txtCorreoLaboral.Text
-        CACPN.RegistroActualCACPN.cargo_puesto_laboral = txtCargoPuestoLaboral.Text
-        CACPN.RegistroActualCACPN.tiempo_servicio_laboral = txtTiempoServLaboral.Text
-        CACPN.RegistroActualCACPN.fecha_ingreso_laboral = txtFechaIngresoLaboral.Text
-        CACPN.RegistroActualCACPN.ingreso_total_US = txtIngresoTotUS.Text
-        CACPN.RegistroActualCACPN.giro_actividad_1 = txtGiroActv1.Text
-        CACPN.RegistroActualCACPN.giro_actividad_2 = txtGiroActv2.Text
-        CACPN.RegistroActualCACPN.giro_actividad_3 = txtGiroActv3.Text
-        CACPN.RegistroActualCACPN.giro_actividad_4 = txtGiroActv4.Text
-        If chbxPersonaPolitica1.Checked Then
-            CACPN.RegistroActualCACPN.persona_politica = "Si"
-        End If
-        If chbxPersonaPolitica2.Checked Then
-            CACPN.RegistroActualCACPN.persona_politica = "No"
-        End If
-        If chbxCargoPolitico1.Checked Then
-            CACPN.RegistroActualCACPN.cargo_politico = "Si"
-        End If
-        If chbxCargoPolitico2.Checked Then
-            CACPN.RegistroActualCACPN.cargo_politico = "No"
-        End If
+        With CACPN.RegistroActualCACPN
+            .nombre_empresa = txtNombreEmpresa.Text
+            .nit = txtNit.Text
+            .negocio_propio = txtNegocioPropio.Text
+            .actividad_economica = txtActividadEconomica.Text
+
+            .calle_av_laboral = txtCalleAvLaboral.Text
+            .numero_laboral = txtNumeroLaboral.Text
+            .calle_av_laboral2 = txtCalleAvLaboral2.Text
+            .departamento_laboral = txtDepartamentoLaboral.Text
+            .provincia_laboral = txtProvinciaLaboral.Text
+            .distrito_laboral = txtDistritoLaboral.Text
+            .telefono_fijo_laboral = txtTelFijoLaboral.Text
+            .telefono_celular_laboral = txtTelCelLaboral.Text
+            .correo_laboral = txtCorreoLaboral.Text
+            .cargo_puesto_laboral = txtCargoPuestoLaboral.Text
+            .tiempo_servicio_laboral = txtTiempoServLaboral.Text
+            .fecha_ingreso_laboral = txtFechaIngresoLaboral.Text
+
+            .ingreso_total_US = txtIngresoTotUS.Text
+
+            .giro_actividad_1 = txtGiroActv1.Text
+            .giro_actividad_2 = txtGiroActv2.Text
+            .giro_actividad_3 = txtGiroActv3.Text
+            .giro_actividad_4 = txtGiroActv4.Text
+
+            If chbxPersonaPolitica1.Checked Then
+                .persona_politica = "Si"
+            End If
+            If chbxPersonaPolitica2.Checked Then
+                .persona_politica = "No"
+            End If
+            If chbxCargoPolitico1.Checked Then
+                .cargo_politico = "Si"
+            End If
+            If chbxCargoPolitico2.Checked Then
+                .cargo_politico = "No"
+            End If
+        End With
     End Sub
 End Class

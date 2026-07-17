@@ -37,11 +37,13 @@
                 txtDepCorrespondencia.Text = .departamento_correspondencia
                 txtProvCorrespondencia.Text = .provincia_correspondencia
                 txtDistCorrespondencia.Text = .distrito_correspondencia
+
                 txtEstadoCivil.Text = .estado_civil
                 txtVivienda.Text = .vivienda
                 txtGradoInstruccion.Text = .grado_instruccion
                 txtSituacionLaboral.Text = .situacion_laboral
                 txtProfesionOcupacion.Text = .profesion_ocupacion
+
                 txtNombreConyuge.Text = .nombre_completo_conyuge
                 txtCiConyuge.Text = .ci_conyuge
                 txtNacConyuge.Text = .nacionalidad_conyuge
@@ -69,21 +71,25 @@
     End Function
 
     Private Sub RegistrarDatos()
-        CACPN.RegistroActualCACPN.envio_correspondencia = txtEnvioCorrespondencia.Text
-        CACPN.RegistroActualCACPN.calle_av_correspondencia = txtCalleAvCorrespondencia.Text
-        CACPN.RegistroActualCACPN.num_correspondencia = txtNumCorrespondencia.Text
-        CACPN.RegistroActualCACPN.departamento_correspondencia = txtDepCorrespondencia.Text
-        CACPN.RegistroActualCACPN.provincia_correspondencia = txtProvCorrespondencia.Text
-        CACPN.RegistroActualCACPN.distrito_correspondencia = txtDistCorrespondencia.Text
-        CACPN.RegistroActualCACPN.estado_civil = txtEstadoCivil.Text
-        CACPN.RegistroActualCACPN.vivienda = txtVivienda.Text
-        CACPN.RegistroActualCACPN.grado_instruccion = txtGradoInstruccion.Text
-        CACPN.RegistroActualCACPN.situacion_laboral = txtSituacionLaboral.Text
-        CACPN.RegistroActualCACPN.profesion_ocupacion = txtProfesionOcupacion.Text
-        CACPN.RegistroActualCACPN.nombre_completo_conyuge = txtNombreConyuge.Text
-        CACPN.RegistroActualCACPN.ci_conyuge = txtCiConyuge.Text
-        CACPN.RegistroActualCACPN.nacionalidad_conyuge = txtNacConyuge.Text
-        CACPN.RegistroActualCACPN.residente_conyuge = txtResiConyuge.Text
-        CACPN.RegistroActualCACPN.giro_actividad_conyuge = txtGiroActConyuge.Text
+        With CACPN.RegistroActualCACPN
+            .envio_correspondencia = txtEnvioCorrespondencia.Text
+            .calle_av_correspondencia = txtCalleAvCorrespondencia.Text
+            .num_correspondencia = txtNumCorrespondencia.Text
+            .departamento_correspondencia = txtDepCorrespondencia.Text
+            .provincia_correspondencia = txtProvCorrespondencia.Text
+            .distrito_correspondencia = txtDistCorrespondencia.Text
+
+            .estado_civil = txtEstadoCivil.Text
+            .vivienda = txtVivienda.Text
+            .grado_instruccion = txtGradoInstruccion.Text
+            .situacion_laboral = txtSituacionLaboral.Text
+            .profesion_ocupacion = txtProfesionOcupacion.Text
+
+            .nombre_completo_conyuge = txtNombreConyuge.Text
+            .ci_conyuge = txtCiConyuge.Text
+            .nacionalidad_conyuge = txtNacConyuge.Text
+            .residente_conyuge = txtResiConyuge.Text
+            .giro_actividad_conyuge = txtGiroActConyuge.Text
+        End With
     End Sub
 End Class
